@@ -1,0 +1,25 @@
+public static final TAG = "projeto"
+public = publico e pode ser acessado de qualquer lugar
+static  = pode ser acessado sem ter que instanciar uma classe
+final    = cria uma constante. Constantes sao sempre escritas com todas as letras em maiusculo e se o nome for composto, um underline vai separar as palavras.
+Criamos a estrutura do padrao MVC, criando os pacotes e colocando a MainActivity dentro do pacote view.
+Agora vamos criar para cada pacote uma classe.
+Feito isso vamos fazer o diagrama de classe para os nossos objetos, comecando pelo usuario.
+No diagrama temos o nome da classe, os atributos e os metodos get e set.
+O metodo get retorna o valor de um atributo
+O metodo set grava um valor em um atributo.
+Como o metodo get retorna um valor, o retorno tem que ser do mesmo tipo que o atributo.
+O metodo set nao retorna nada entao eh void.
+A sintaxe tanto do get quanto do set é identica: colocamos get ou set + o nome do atributo com letra maiuscula. Ex: getId() setId(int id)
+
+No pacote datamodel vao ficar os modelos das tabelas. 
+E para fazer de forma profissional as tabelas, vamos fazer os seguintes passos:
+1 - criar uma constante com o nome da tabela. 
+2 - criar constantes com os nomes dos atributos. 
+3 - criar um metodo criarTabela que vai concatenar esses atributos criados como constante.
+Todos esses procedimentos vamos criar como static, ou seja nao precisamos instanciar a classe para usar.
+
+psfs ID = "id"
+criarTabela = ""
+criarTabela += "CREATE TABLE " + TABELA + "(";
+criarTabela += ID + " int primary key autoincrement, "
